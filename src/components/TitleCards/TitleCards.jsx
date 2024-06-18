@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './TitleCards.css'
 import cards_data from '../../assets/cards/Cards_data.js'
-import config from '../../../config.js'
 import { Link } from 'react-router-dom'
 
 const TitleCards = ({title, category}) => {
 
   const [ apiData, setApiData ] = useState([])
   const cardsRef = useRef()
-  const token = config.value
+  const token = import.meta.env.VITE_TOKEN
 
   const options = {
     method: 'GET',

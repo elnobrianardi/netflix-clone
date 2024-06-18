@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Player.css";
 import back_arrow_icon from "../../assets/back_arrow_icon.png";
-import config from "../../components/TitleCards/config";
 import { useNavigate, useParams } from "react-router-dom";
+
 
 const Player = () => {
 
-  const token = config.value
+  const token = import.meta.env.VITE_TOKEN
   const { id } = useParams()
   const navigate = useNavigate()
   const [ apiData,setApiData ] = useState({
